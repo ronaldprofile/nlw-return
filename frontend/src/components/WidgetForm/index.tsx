@@ -1,5 +1,4 @@
 import { useCallback, useState } from "react";
-import { CloseButton } from "../CloseButton";
 
 import bugImage from "../../assets/bug.svg";
 import ideaImage from "../../assets/idea.svg";
@@ -25,7 +24,7 @@ export const feedbackTypes = {
     }
   },
 
-  THOUGHT: {
+  OTHER: {
     title: "Outro",
     image: {
       source: thoughtImage,
@@ -34,9 +33,6 @@ export const feedbackTypes = {
   }
 };
 
-// Object.entries(feedbackTypes) => [ ["BUG",  {...}], [], [] ]
-
-// chave de cada objeto do feedbackTypes
 export type FeedbackType = keyof typeof feedbackTypes;
 
 export function WidgetForm() {
